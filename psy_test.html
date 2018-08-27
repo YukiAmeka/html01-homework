@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>КМ - Опитувальник про стан здоров'я (PHQ-9)</title>
+</head>
+<body>
+    <header id="top">
+        <h1>Каша-малаша</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Домашня сторінка</a></li>
+            <li><a href="jap_char.html">Вивчаємо японську мову</a></li>
+            <li><a href="psy_test.html">Психологічні тести</a></li>
+        </ul>
+    </nav>
+    <article>
+        <img src="psychologist.png" alt="Пацієнт і психолог">
+        <h3>Психологічні тести - Опитувальник про стан здоров'я (PHQ-9)</h3>
+        <p>PHQ-9 - стандартний тест для оцінки наявності та важкості депресивного стану. За допомогою короткого списку запитань будь-хто може проаналізувати частоту важливих симптомів та оцінити власний стан.</p>
+        <p>Мета цього електронного варіанту опитувальника - надати Вам можливість самостійно здійснити первинну психологічну діагностику власного психологічного стану і прийняти рішення про подальші дії.</p>
+        <p>Ми також збираємо анонімні статистичні дані про осіб, які заповнили цей тест, для оцінки психологічного стану Українців. Цю частину тесту заповнювати не обов'язково, але ми будемо вдячні, якщо ви надасте нам цю інформацію.</p>
+        
+        <form method="POST" action="https://formspree.io/anyalo307@gmail.com">
+            <fieldset>
+                <legend>Анонімні дані про Вас (заповнювати не обов'язково)</legend>
+                <label for="gender">Стать:</label>
+                <select id="gender">
+                    <option value="none" selected>Вкажіть свою стать</option>
+                    <option value="male">Чоловіча</option>
+                    <option value="female">Жіноча</option>
+                    <option value="other">Інша</option>
+                </select>
+                <br>
+                <label for="year">Рік народження:
+                    <input type="text" id="year" placeholder="Вкажіть свій рік народження" pattern="(?:19|20)[0-9]{2}" title="наприклад 1998">
+                </label>
+                <br>
+                <label for="education">Освіта:</label>
+                <select id="education" title="вкажіть найвищу освіту, яку ви отримали на сьогодні">
+                    <option value="none" selected>Вкажіть свою освіту</option>
+                    <option value="school">Базова середня</option>
+                    <option value="prof">Професійно-технічна</option>
+                    <option value="bachelor">Бакалавр</option>
+                    <option value="spec">Спеціаліст</option>
+                    <option value="master">Магістр</option>
+                    <option value="drs">Кандидат наук</option>
+                    <option value="phd">Доктор наук</option>
+                </select>
+                <br>
+                <hr>
+                <label title="оберіть всі варіанти, що Вас стосуються">Чи маєте Ви відношення до АТО?</label><br>
+                <label><input type="checkbox" name="ato" value="combat">Беру участь у бойових діях</label><br>
+                <label><input type="checkbox" name="ato" value="pastcombat">Брав/ла участь у бойових діях в минулому</label><br>
+                <label><input type="checkbox" name="ato" value="alter">Виконую небойову роль (працівник штабу, медик і т.п.)</label><br>
+                <label><input type="checkbox" name="ato" value="pastalter">Виконував/ла небойову роль</label><br>
+                <label><input type="checkbox" name="ato" value="vol">Допомагаю як волонтер</label><br>
+                <label><input type="checkbox" name="ato" value="interest">Активно цікавлюся ситуацією</label><br>
+                <label><input type="checkbox" name="ato" value="casual">Дивлюсь новини, але поза тим не цікавлюся</label><br>
+                <label><input type="checkbox" name="ato" value="avoid">Активно уникаю всіх новин, пов'язаних з АТО</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Опитувальник PHQ-9</legend>
+                <label>Будь-ласка, дайте відповідь на запитання: Як часто за останні 2 тижні Вас турбували будь-які з наступних проблем?</label><br>
+                <label>Вам було не дуже цікаво або не дуже подобалось чимось займатись</label><br>
+                    <label><input type="radio" name="q1" value="never">Зовсім не турбували</label><br>
+                    <label><input type="radio" name="q1" value="rare">Декілька днів</label><br>
+                    <label><input type="radio" name="q1" value="often">Більше половини всіх днів</label><br>
+                    <label><input type="radio" name="q1" value="daily">Майже щоденно</label><br>
+                <label>Ви відчували смуток, пригнічення або безнадію</label><br>
+                    <label><input type="radio" name="q2" value="never">Зовсім не турбували</label><br>
+                    <label><input type="radio" name="q2" value="rare">Декілька днів</label><br>
+                    <label><input type="radio" name="q2" value="often">Більше половини всіх днів</label><br>
+                    <label><input type="radio" name="q2" value="daily">Майже щоденно</label><br>
+                <label>Вам було важко засинати, Ваш сон був переривчастим або Ви спали надто довго</label><br>
+                    <label><input type="radio" name="q3" value="never">Зовсім не турбували</label><br>
+                    <label><input type="radio" name="q3" value="rare">Декілька днів</label><br>
+                    <label><input type="radio" name="q3" value="often">Більше половини всіх днів</label><br>
+                    <label><input type="radio" name="q3" value="daily">Майже щоденно</label><br>
+                <label>Ви відчували втому або брак сил</label><br>
+                    <label><input type="radio" name="q4" value="never">Зовсім не турбували</label><br>
+                    <label><input type="radio" name="q4" value="rare">Декілька днів</label><br>
+                    <label><input type="radio" name="q4" value="often">Більше половини всіх днів</label><br>
+                    <label><input type="radio" name="q4" value="daily">Майже щоденно</label><br>
+                <label>У Вас був поганий апетит або Ви переїдали</label><br>
+                    <label><input type="radio" name="q5" value="never">Зовсім не турбували</label><br>
+                    <label><input type="radio" name="q5" value="rare">Декілька днів</label><br>
+                    <label><input type="radio" name="q5" value="often">Більше половини всіх днів</label><br>
+                    <label><input type="radio" name="q5" value="daily">Майже щоденно</label><br>
+                <label>Ви погано про себе думали або почувалися невдахою, який/яка підвів/ела себе чи свою сім'ю</label><br>
+                    <label><input type="radio" name="q6" value="never">Зовсім не турбували</label><br>
+                    <label><input type="radio" name="q6" value="rare">Декілька днів</label><br>
+                    <label><input type="radio" name="q6" value="often">Більше половини всіх днів</label><br>
+                    <label><input type="radio" name="q6" value="daily">Майже щоденно</label><br>
+                <label>Вам було важко зосередитись, наприклад, на читанні газети або перегляді телепередач</label><br>
+                    <label><input type="radio" name="q7" value="never">Зовсім не турбували</label><br>
+                    <label><input type="radio" name="q7" value="rare">Декілька днів</label><br>
+                    <label><input type="radio" name="q7" value="often">Більше половини всіх днів</label><br>
+                    <label><input type="radio" name="q7" value="daily">Майже щоденно</label><br>
+                <label>Ви рухались або розмовляли настільки повільно, що це було помітно для оточуючих. Або ж навпаки, Ви були настільки метушливі або неспокійні, що рухались набагато більше, ніж зазвичай</label><br>
+                    <label><input type="radio" name="q8" value="never">Зовсім не турбували</label><br>
+                    <label><input type="radio" name="q8" value="rare">Декілька днів</label><br>
+                    <label><input type="radio" name="q8" value="often">Більше половини всіх днів</label><br>
+                    <label><input type="radio" name="q8" value="daily">Майже щоденно</label><br>
+                <label>У Вас були думки, що Вам краще б померти, або Ви думали про те, щоб заподіяти собі яку-небудь шкоду</label><br>
+                    <label><input type="radio" name="q9" value="never">Зовсім не турбували</label><br>
+                    <label><input type="radio" name="q9" value="rare">Декілька днів</label><br>
+                    <label><input type="radio" name="q9" value="often">Більше половини всіх днів</label><br>
+                    <label><input type="radio" name="q9" value="daily">Майже щоденно</label><br>
+            </fieldset>
+            
+            <p>Введіть свій email, щоб отримати копію опитувальника.<br>
+            <em>Увага!</em> Ми не зберігаємо Ваших контактних даних і не передаємо їх третім особам.</p>
+            <label>Email:
+                <input type="email" name="email" placeholder="Введіть свій email" title="abcd@gmail.com">
+            </label>
+            <br>
+            <input type=submit value="Надіслати">
+            <input type=reset value="Очистити всі поля">
+        </form>
+        
+        <p><a href="#top">Повернутися до початку сторінки</a></p>
+    </article>
+    <footer>©2018 Вся інформація представлена на сайті з ознайомчою метою</footer>
+</body>
+</html>
